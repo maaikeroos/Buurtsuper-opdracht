@@ -1,0 +1,9 @@
+@font-face{
+	font-family: "SEGOEUI";
+	src: url("../font/SEGOEUI.TTF");
+	font-family: 'SEGOEUI', sans-serif;
+}
+*{
+	font-family: "SEGOEUI", sans-serif;
+	color: black;
+}

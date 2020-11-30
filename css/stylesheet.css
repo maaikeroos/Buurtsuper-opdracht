@@ -1,0 +1,329 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+h1{
+	font-size: 17px;
+	text-decoration: underline;
+}
+p{
+	font-size: 13px;
+}
+.container{
+	width: 90%;
+	margin: 0% auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 
+	"head 		head 	head 		head"
+	"banner 	banner 	banner 		banner"
+	"main 		main 	main 		main"
+	"side 		side 	side 		side"
+	"footer		footer	footer		footer";
+}
+.head{
+	padding: 20px;
+	background-color: white;
+	color: black;
+	grid-area: head;
+}
+.circle{
+	display: flex;
+	width:120px;
+    height:120px;
+    border-radius:250px;
+    background-color:#F0BC68;
+    color: white;
+    align-items: center;
+ 	justify-content: center;
+ 	text-align: center;
+ 	font-size: 17px;
+    animation: bounceIn 0.6s;
+    transform: rotate(0deg) scale(1) translateZ(0);
+    transition: all 0.4s cubic-bezier(.8,1.8,.75,.75);
+    cursor: pointer;
+}
+.circle:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+.banner{
+ 	background-image: url("../afbeeldingen/groente.jpg");
+ 	min-height: 300px;
+ 	color: white;
+  	font-size: 65px;
+	text-align: right;
+	font-style: italic;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 20px;
+	grid-area: banner;
+}
+.main{
+	padding: 20px;
+	background-color: #F0BC68;
+	color: #F0BC68;
+	grid-area: main;
+	border-radius: 10px;
+}
+.aside{
+	padding: 20px;
+	background-color: white;
+	color: #F4D5A2;
+	grid-area: side;
+	border-radius: 10px;
+}
+.aside p a{
+	font-style: italic;
+}
+.footer{
+	padding: 20px;
+	background-color: #F0BC68;
+	color: white;
+	grid-area: footer;
+	border-radius: 10px;
+	display: block;
+}
+.footer h1{
+	text-decoration: none;
+}
+.footer .footer-left, .footer .footer-center, .footer .footer-right{
+	display: block;
+}
+.footer p{
+	margin: 0px;
+}
+.menu{
+	align-items: flex-end;
+}
+.menu ul li{
+	font-size: 12px;
+	display: inline;
+	list-style: none;
+	font-style: bold;
+}
+.menu ul li a{
+	color: black;
+	padding-right: 10px;
+}
+/*Je gaat hier van telefoon over op tablet */
+@media only screen and (min-width: 600px) and (max-width: 900px){
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	h1{
+		font-size: 19px;
+	}
+	p{
+		font-size: 15px;
+	}
+	.container{
+		width: 90%;
+		margin: 0% auto;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+		"head 		head 	head 		head"
+		"banner 	banner 	banner 		banner"
+		"main 		main 	side 		side"
+		"footer		footer	footer		footer";
+	}
+	.head{
+		grid-area: head;
+	}
+	.circle{
+		display: flex;
+		width:130px;
+	    height:130px;
+	 	font-size: 19px;
+	}
+	.banner{
+	 	min-height: 400px;
+	  	font-size: 70px;
+		grid-area: banner;
+	}
+	.main{
+		grid-area: main;
+		background-color: white;
+	}
+	.aside{
+		grid-area: side;
+		background-color: white;
+	}
+	.footer{
+		grid-area: footer;
+	}
+	.footer .footer-left, .footer .footer-center, .footer .footer-right{
+		display: inline-block;
+		vertical-align: top
+	}
+	.footer-left{
+		width: 41%;
+	}
+	.footer-center{
+		width: 30%;
+	}
+	.footer-right{
+		width: 25%;
+	}
+	.menu ul li{
+		font-size: 19px;
+		display: inline;
+		list-style: none;
+	}
+}
+
+/*Je gaat hier van tablet over op een klein lapptop scherm */
+@media only screen and (min-width: 900px) and (max-width: 1100px){
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	h1{
+		font-size: 21px;
+	}
+	p{
+		font-size: 17px;
+	}
+	.container{
+		width: 90%;
+		margin: 0% auto;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+		"head 		head 	head 		head"
+		"banner 	banner 	banner 		banner"
+		"main 		main 	side 		side"
+		"footer		footer	footer		footer";
+	}
+	.head{
+		grid-area: head;
+	}
+	.circle{
+		display: flex;
+		width:140px;
+	    height:140px;
+	 	font-size: 21px;
+	}
+	.banner{
+	 	min-height: 450px;
+	  	font-size: 75px;
+		grid-area: banner;
+	}
+	.main{
+		grid-area: main;
+		background-color: white;
+	}
+	.aside{
+		grid-area: side;
+		background-color: white;
+	}
+	.footer{
+		grid-area: footer;
+	}
+	.footer .footer-left, .footer .footer-center, .footer .footer-right{
+		display: inline-block;
+		vertical-align: top
+	}
+	.footer-left{
+		width: 33%;
+	}
+	.footer-center{
+		width: 33%;
+	}
+	.footer-right{
+		width: 30%;
+	}
+	.menu{
+		display: flex;
+	}
+	.menu ul li {
+	  	display: inline;
+		font-size: 19px;
+		padding: 10px;
+		list-style: none;
+	}
+}
+
+/*Je gaat hier van een klein laptop scherm over op een grote desktop versie*/
+@media only screen and (min-width: 1100px){
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	h1{
+		font-size: 23px;
+	}
+	p{
+		font-size: 19px;
+	}
+	.container{
+		width: 90%;
+		margin: 0% auto;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: 
+		"head 		head 	head 		head"
+		"banner 	banner 	banner 		banner"
+		"main 		main 	side 		side"
+		"footer		footer	footer		footer";
+	}
+	.head{
+		grid-area: head;
+	}
+	.circle{
+		display: flex;
+		width:150px;
+	    height:150px;
+	 	font-size: 23px;
+	}
+	.banner{
+	 	min-height: 500px;
+	  	font-size: 80px;
+		grid-area: banner;
+	}
+	.main{
+		grid-area: main;
+		background-color: white;
+	}
+	.aside{
+		grid-area: side;
+		background-color: white;
+	}
+	.footer{
+		grid-area: footer;
+	}
+	.footer .footer-left, .footer .footer-center, .footer .footer-right{
+		display: inline-block;
+		vertical-align: top
+	}
+	.footer-left{
+		width: 30%;
+	}
+	.footer-center{
+		width: 30%;
+	}
+	.footer-right{
+		width: 30%;
+	}
+	.footer-left .adress, .footer-left .phone, .footer-left .mail{
+		display: inline;
+	}
+	.menu{
+		display: flex;
+	}
+	.menu ul li {
+	  	display: inline;
+		font-size: 21px;
+		padding: 10px;
+		list-style: none;
+	}
+	.menu ul li a:hover{
+		color:#F0BC68;
+	}
+}
